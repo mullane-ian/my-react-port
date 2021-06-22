@@ -11,16 +11,10 @@ export default function Header() {
               <a href='/'>about</a>
             </li>
             <li>
-              <a href='/'>products</a>
-            </li>
-            <li>
-              <a href='/'>work</a>
-            </li>
-            <li>
-              <a href='/'>reach</a>
+              <a href='/'>Work</a>
             </li>
             <li className='btn'>
-              <a href='/'>Work</a>
+              <a href='/'>Contact</a>
             </li>
           </ul>
         </nav>
