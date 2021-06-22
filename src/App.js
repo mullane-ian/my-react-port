@@ -72,7 +72,7 @@
             <Model />
           </Stage>
         </Suspense>
-        <OrbitControls useRef={ref} autoRotate enableZoom={false} enablePan={false}  />
+        <OrbitControls useRef={ref} autoRotate enableZoom={false} enablePan={false} enableRotate={false}  />
       </Canvas>
       <Loader />
      </>
