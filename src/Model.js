@@ -15,7 +15,7 @@ export default function Model(props) {
   React.useEffect(() => {
     actions.course_cheval.play()
     actions.course_charette.play()
-    actions.pose_ankou.play()
+   
 
   })
   return (
