@@ -42,13 +42,14 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
  
 }
 
 .ContactForm{
     
     display: flex;
+    
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -60,22 +61,6 @@ body,
 }
 
 
-
-
-.input-about-business{
-   width: 30vw;
-    height: 30vh;
-}
-
-
-.scrollArea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-}
 
 .container {
   margin: 0 auto;
@@ -93,6 +78,7 @@ header {
   position: absolute;
   z-index: 99;
   width: 90%;
+  margin-bottom: 30px;
   padding: 40px;
   .header-inner {
     display: flex;
@@ -201,18 +187,13 @@ button{
   
 
   
-  body {
-    position: fixed;
-    overflow: hidden;
-    overscroll-behavior-y: none;
-    font-family: 'Josefin Sans', sans-serif;
-  }
+
   
   .main {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+  
   }
 
   
@@ -278,7 +259,7 @@ button{
   form {
     margin-left:auto;
     margin-right:auto;
-    width: 343px;
+    width: 66vw;
     height: 66vh;
     padding:30px;
     border: 1px solid rgba(0,0,0,.2);
@@ -292,7 +273,7 @@ button{
     -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
     box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    overflow: hidden; 
+
 }
 
 input {
@@ -314,7 +295,7 @@ input {
     margin-bottom:20px;
 }
 textarea {
-    width: 276px;
+    width: 100%;
     height: 200px;
     border: 1px solid rgba(255,255,255,.4);
     -moz-border-radius: 4px;
