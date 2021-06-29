@@ -281,7 +281,7 @@ button{
 }
 
 input {
-    width: 276px;
+    width: 90%;
     height: 48px;
     border: 1px solid rgba(255,255,255,.4);
     -moz-border-radius: 4px;
@@ -299,7 +299,7 @@ input {
     margin-bottom:20px;
 }
 textarea {
-    width: 100%;
+    width: 90%;
     height: 200px;
     border: 1px solid rgba(255,255,255,.4);
     -moz-border-radius: 4px;
@@ -321,10 +321,7 @@ textarea {
 @media screen and (max-width: 992px) {
   .hire-section {
     
-    font-size: 10px;
-    font-weight: bold;
-    
-    margin: auto;
+   text-align: left;
     
   }
   .footer {

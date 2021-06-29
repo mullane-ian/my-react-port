@@ -11,12 +11,12 @@ function Navigation(props) {
            </Link>
         <nav>
           <ul>
-            {/* <li>
+            <li>
             <Link className="nav-link" to="/">
-                   Home
+                   Connect
                  
                  </Link>
-            </li> */}
+            </li>
             <li>
             <Link className="nav-link" to="/Work">
                    Work
