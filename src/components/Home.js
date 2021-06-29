@@ -10,7 +10,7 @@ import { Html } from "@react-three/drei"
 // A physical sphere tied to mouse coordinates without visual representation
 function Mouse() {
   const { viewport } = useThree()
-  const [, api] = useSphere(() => ({ type: "Kinematic", args: 4.5 }))
+  const [, api] = useSphere(() => ({ type: "Kinematic", args: 7.5 }))
   return useFrame(state =>
     api.position.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 7),
   )
@@ -37,7 +37,7 @@ function Borders() {
 }
 
 // Spheres falling down
-function InstancedSpheres({ count = 150 }) {
+function InstancedSpheres({ count = 250 }) {
   const { viewport } = useThree()
   const texture = useLoader(THREE.TextureLoader, texUrl)
   const [ref] = useSphere(index => ({
@@ -47,8 +47,8 @@ function InstancedSpheres({ count = 150 }) {
   }))
   return (
     <instancedMesh ref={ref} castShadow receiveShadow args={[null, null, count]}>
-      <sphereBufferGeometry args={[1, 32, 32]} />
-      <meshPhysicalMaterial color="#111"  clearcoat={10} clearcoatRoughness={0} />
+      <sphereBufferGeometry args={[1, Math.random(), Math.random()]} />
+      <meshPhysicalMaterial color="#fff"  clearcoat={10} clearcoatRoughness={0} />
     </instancedMesh>
   )
 }
@@ -59,10 +59,10 @@ export default function Home() {
     <Canvas
       concurrent
       shadowMap
-      gl={{ alpha: false, antialias: false }}
+      gl={{ alpha: true, antialias: true }}
       camera={{ position: [0, 0, 20], fov: 50, near: 17, far: 40 }}>
-      <fog attach="fog" args={["#d94575", 15, 40]} />
-      <color attach="background" args={["#ffffff"]} />
+      <fog attach="fog" args={["#d94575", 10, 40]} />
+      {/* <color attach="background" args={["red"]} /> */}
       <ambientLight intensity={0.8} />
       <directionalLight
         position={[50, 50, 25]}
@@ -79,7 +79,7 @@ export default function Home() {
       <directionalLight position={[-10, -10, -5]} intensity={0.5} />
       <Suspense fallback={null}>
         <Physics gravity={[0, -20, 0]} defaultContactMaterial={{ restitution: 0.6 }}>
-          <group position={[0, 1.55, -10]}>
+          <group position={[0, 0, -10]}>
             <Mouse />
             <Borders />
             <InstancedSpheres />
@@ -94,7 +94,7 @@ export default function Home() {
         <h2 className="hire-section__title">Hello, my name is Ian</h2>
         <p>I am studying Computer Science at Arizona State University</p>
         <p>
-          <strong>and I love working with JavaScript, React, Three.js, and Node.js</strong>
+          <strong>I love working with JavaScript, React, Three.js, and Node.js</strong>
         </p>
         <p>Contact me to create a beautiful and interactive web experience for your valley business!</p>
         <a href="https://ian-m.xyz/contact" className="button">
