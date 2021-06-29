@@ -91,12 +91,12 @@ export default function Home() {
 
     </Canvas>
     <div className="hire-section">
-        <h2 className="hire-section__title">Hello, my name is Ian</h2>
-        <p>I am studying Computer Science at Arizona State University</p>
+        <h2 className="hire-section__title">Hello, my name is Ian.</h2>
+        <p>I am studying Computer Science at Arizona State University,</p>
         <p>
-          <strong>I love working with JavaScript, React, Three.js, and Node.js</strong>
+          <strong>I love working with JavaScript, React, Three.js, and Node.js,</strong>
         </p>
-        <p>Contact me to create a beautiful and interactive web experience for your valley business!</p>
+        <p>contact me to create a beautiful and interactive web experience for your Valley business!</p>
         <a href="https://ian-m.xyz/contact" className="button">
           reach me
         </a>

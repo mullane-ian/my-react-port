@@ -86,7 +86,7 @@ header {
     justify-content: space-between;
     .logo {
       font-weight: 900;
-      letter-spacing: 2px;
+     
       color: #d94575;
       text-decoration: none;
     }
@@ -204,25 +204,29 @@ button{
     width: 100%;
     transform: translate3d(0, -50%, 0);
     text-align: center;
+    
   
     
   color: rgba(0,0,0,0.8);
   font-family: 'Codystar';
-  letter-spacing: 0.5rem;
+ 
   text-shadow: -0.03em 0 0 red, 
                 0.03em 0 0 cyan;
   }
   
   .hire-section__title {
+    
     font-size: 60px;
     font-weight: bold;
-    line-height: 1.5;
-    margin: 0 0 15px;
+    
+    margin: auto;
+    
   }
   
   .hire-section p {
+    
     font-size: 20px;
-    line-height: 1.5;
+  
     margin: 5px 0;
   }
   
@@ -241,7 +245,7 @@ button{
     color: white;
     box-shadow: none;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+   
     text-decoration: none;
     padding: 11px 22px;
     border-radius: 4px;
@@ -315,7 +319,14 @@ textarea {
 
 
 @media screen and (max-width: 992px) {
-
+  .hire-section {
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin: auto;
+    
+  }
   .footer {
     display: none;
   }
