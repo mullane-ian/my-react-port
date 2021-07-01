@@ -30,7 +30,7 @@ function Post() {
       rangeThreshold: 0.5, // Controls sensitivity based on camera view distance **
       rangeFalloff: 0.01,
       luminanceInfluence: 0.5,
-      radius: 5, // Spread range
+      radius: 50, // Spread range
       intensity: 10,
       bias: 0.5,
     })
@@ -58,7 +58,7 @@ function Post() {
 export default function Effect() {
   return (
     <Suspense fallback={null}>
-      <Post />
+     
     </Suspense>
   )
 }

@@ -3,16 +3,16 @@ import React, { Suspense, useState, useCallback } from "react"
 import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber"
 import { Physics, usePlane, useSphere } from "@react-three/cannon"
 
-import Post from "./Post"
+
 import texUrl from "./tex.jpg"
 import { Html } from "@react-three/drei"
 
 // A physical sphere tied to mouse coordinates without visual representation
 function Mouse() {
   const { viewport } = useThree()
-  const [, api] = useSphere(() => ({ type: "Kinematic", args: 7.5 }))
+  const [, api] = useSphere(() => ({ type: "kinematic ", args: 4.5 }))
   return useFrame(state =>
-    api.position.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 7),
+    api.position.set((state.mouse.x * viewport.width) / 1, (state.mouse.y * viewport.height) / 1, 7),
   )
 }
 
@@ -30,7 +30,7 @@ function Borders() {
       <Plane position={[0, -viewport.height / 2, 0]} rotation={[-Math.PI / 2, 0, 0]} />
       <Plane position={[-viewport.width / 2 - 1, 0, 0]} rotation={[0, Math.PI / 2, 0]} />
       <Plane position={[viewport.width / 2 + 1, 0, 0]} rotation={[0, -Math.PI / 2, 0]} />
-      {/* <Plane position={[0, 0, 0]} rotation={[0, 0, 0]} /> */}
+      <Plane position={[0, 0, 0]} rotation={[0, 0, 0]} />
       <Plane position={[0, 0, 12]} rotation={[0, -Math.PI, 0]} />
     </>
   )
@@ -47,8 +47,8 @@ function InstancedSpheres({ count = 250 }) {
   }))
   return (
     <instancedMesh ref={ref} castShadow receiveShadow args={[null, null, count]}>
-      <sphereBufferGeometry args={[1, Math.random(), Math.random()]} />
-      <meshPhysicalMaterial color="#fff"  clearcoat={10} clearcoatRoughness={0} />
+      <sphereBufferGeometry args={[1, 32, 32]} />
+      <meshPhysicalMaterial color="#fff"  clearcoat={0} clearcoatRoughness={1} />
     </instancedMesh>
   )
 }
@@ -85,7 +85,7 @@ export default function Home() {
             <InstancedSpheres />
           </group>
         </Physics>
-        <Post />
+        
 
       </Suspense>
 
@@ -106,3 +106,4 @@ export default function Home() {
 
   );
 }
+
