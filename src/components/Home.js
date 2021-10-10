@@ -37,7 +37,7 @@ function Borders() {
 }
 
 // Spheres falling down
-function InstancedSpheres({ count = 250 }) {
+function InstancedSpheres({ count = 150 }) {
   const { viewport } = useThree()
   const texture = useLoader(THREE.TextureLoader, texUrl)
   const [ref] = useSphere(index => ({
